@@ -1,14 +1,17 @@
 ############------------ IMPORTS ------------############
-import selenium
-
-
-############------------ GLOBAL VARIABLE(S) ------------############
-url = 'https://www.linkedin.com/feed/?trk=homepage-basic_signin-form_submit'
+from selenium import webdriver
 
 
 ############------------ FUNCTION(S) ------------############
 def delete_inmails():
-    pass
+    # set url
+    url = 'https://www.linkedin.com/in/aa-ag/'
+
+    # creates a webdriver object to open the browser
+    driver = webdriver.Firefox()
+
+    # opens url
+    driver.get(url)
 
 
 ############------------ DRIVER CODE ------------############
