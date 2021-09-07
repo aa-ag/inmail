@@ -1,18 +1,26 @@
 ############------------ IMPORTS ------------############
 import time
 from selenium import webdriver
-from settings import username, password
+import settings as s
 
 
 ############------------ GLOBAL VARIABLE(S) ------------############
-username = username
-password = password
-
-login_url = 'https://www.linkedin.com/login?fromSignIn=true&trk=guest_homepage-basic_nav-header-signin'
+username = s.username
+password = s.password
+login_url = s.linkedin_login_page
+click = s.form_button
 
 
 ############------------ FUNCTION(S) ------------############
-def delete_inmails():
+def log_onto_linkedin():
+    '''
+     had to temoporarily disable two-factor
+     authentication for this.
+
+     opents Firefox, uses credentials and 
+     logs into linkedin, and takes short breaks
+     in between steps
+    '''
     # set url
     url = login_url
 
@@ -38,9 +46,9 @@ def delete_inmails():
     time.sleep(3)
 
     # click on "Sign in" button
-    driver.find_element_by_class_name("btn__primary--large").click()
+    driver.find_element_by_class_name(click).click()
 
 
 ############------------ DRIVER CODE ------------############
 if __name__ == "__main__":
-    delete_inmails()
+    log_onto_linkedin()
