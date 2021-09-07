@@ -24,6 +24,9 @@ def delete_inmails():
     # input username into username field
     driver.find_element_by_id("username").send_keys(username)
 
+     # input password into password field
+    driver.find_element_by_id("password").send_keys(password)
+
 
 ############------------ DRIVER CODE ------------############
 if __name__ == "__main__":
