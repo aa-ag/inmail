@@ -44,9 +44,3 @@ def delete_inmails():
 ############------------ DRIVER CODE ------------############
 if __name__ == "__main__":
     delete_inmails()
-
-
-# TO DO: 
-# https://www.thepythoncode.com/article/automate-login-to-websites-using-selenium-in-python
-# https://qavalidation.com/2018/02/handle-dropdown-selenium-using-python.html/
-# https://www.geeksforgeeks.org/selenium-python-tutorial/
