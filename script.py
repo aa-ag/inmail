@@ -12,6 +12,11 @@ click = s.form_button
 
 
 ############------------ FUNCTION(S) ------------############
+###--- HELPER FUNCTION(S) ---################################
+def generate_random_integer():
+    pass
+
+
 def log_onto_linkedin():
     '''
      had to temoporarily disable two-factor
@@ -57,6 +62,6 @@ def delete_inmails():
 if __name__ == "__main__":
     log_onto_linkedin()
 
-    time.sleep(9.384)
+    # time.sleep(3)
 
-    delete_inmails()
+    # delete_inmails()
