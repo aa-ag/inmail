@@ -15,7 +15,10 @@ click = s.form_button
 ############------------ FUNCTION(S) ------------############
 ###--- HELPER FUNCTION(S) ---################################
 def generate_random_integer():
-    pass
+    '''
+     generates a random int from 1 to 5
+    '''
+    return random.randint(3, 8)
 
 
 def log_onto_linkedin():
