@@ -31,7 +31,7 @@ def generate_random_float():
     return random_float
 
 
-def log_onto_linkedin():
+def delete_inmails():
     '''
      had to temoporarily disable two-factor
      authentication for this.
@@ -77,13 +77,24 @@ def log_onto_linkedin():
     # once logged in, navigate to Messaging
     driver.find_element_by_link_text("Messaging").click()
 
+    # wait to avoid bot-detection
+    seconds = generate_random_float()
+    time.sleep(seconds)
 
-############------------ DRIVER CODE ------------############
-if __name__ == "__main__":
-    log_onto_linkedin()
+    # click on burger | three dots button
+    ### first, expand dropdown
+    driver.find_element_by_class_name("artdeco-button__icon").click()
 
     # wait to avoid bot-detection
     seconds = generate_random_float()
     time.sleep(seconds)
 
+    ### second, click on delete button
+    driver.find_element_by_id("ember312").click()
+
+    
+
+
+############------------ DRIVER CODE ------------############
+if __name__ == "__main__":
     delete_inmails()
