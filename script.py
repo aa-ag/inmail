@@ -16,7 +16,7 @@ click = s.form_button
 ###--- HELPER FUNCTION(S) ---################################
 def generate_random_float():
     '''
-     generates a random float from 1 to 5
+     generates a random float from 3 to 8
     '''
 
     # sets specific range
