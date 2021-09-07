@@ -14,11 +14,19 @@ click = s.form_button
 
 ############------------ FUNCTION(S) ------------############
 ###--- HELPER FUNCTION(S) ---################################
-def generate_random_integer():
+def generate_random_float():
     '''
-     generates a random int from 1 to 5
+     generates a random float from 1 to 5
     '''
-    return random.randint(3, 8)
+
+    # sets specific range
+    min = 3
+    max = 8
+
+    # generate a random floating point number
+    random_float = min + ((max - min) * random.random())
+
+    print(random_float)
 
 
 def log_onto_linkedin():
@@ -64,7 +72,9 @@ def delete_inmails():
 
 ############------------ DRIVER CODE ------------############
 if __name__ == "__main__":
-    log_onto_linkedin()
+    # log_onto_linkedin()
+
+    generate_random_float()
 
     # time.sleep(3)
 
