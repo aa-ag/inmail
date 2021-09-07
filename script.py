@@ -2,6 +2,7 @@
 import time
 from selenium import webdriver
 import settings as s
+import random 
 
 
 ############------------ GLOBAL VARIABLE(S) ------------############
