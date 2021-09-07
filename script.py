@@ -23,8 +23,7 @@ def generate_random_float():
     '''
 
     # sets specific range
-    min = 3
-    max = 8
+    min, max = 3, 8
 
     # generate a random floating point number
     random_float = min + ((max - min) * random.random())
@@ -37,7 +36,7 @@ def log_onto_linkedin():
      had to temoporarily disable two-factor
      authentication for this.
 
-     opents Firefox, uses credentials and 
+     opens Firefox, uses credentials and 
      logs into linkedin, and takes short breaks
      in between steps
     '''
@@ -71,10 +70,12 @@ def log_onto_linkedin():
     # click on "Sign in" button
     driver.find_element_by_class_name(click).click()
 
+    # wait to avoid bot-detection
+    seconds = generate_random_float()
+    time.sleep(seconds)
 
-###--- MAIN ---##############################################
-def delete_inmails():
-    pass
+    # once logged in, navigate to Messaging
+    driver.find_element_by_link_text("Messaging").click()
 
 
 ############------------ DRIVER CODE ------------############
