@@ -26,7 +26,7 @@ def generate_random_float():
     # generate a random floating point number
     random_float = min + ((max - min) * random.random())
 
-    print(random_float)
+    return random_float
 
 
 def log_onto_linkedin():
@@ -48,19 +48,22 @@ def log_onto_linkedin():
     driver.get(url)
 
     # wait to avoid bot-detection
-    time.sleep(5)
+    seconds = generate_random_float()
+    time.sleep(seconds)
 
     # input username into username field
     driver.find_element_by_id("username").send_keys(username)
 
     # wait to avoid bot-detection
-    time.sleep(4)
+    seconds = generate_random_float()
+    time.sleep(seconds)
 
      # input password into password field
     driver.find_element_by_id("password").send_keys(password)
 
     # wait to avoid bot-detection
-    time.sleep(3)
+    seconds = generate_random_float()
+    time.sleep(seconds)
 
     # click on "Sign in" button
     driver.find_element_by_class_name(click).click()
