@@ -3,6 +3,11 @@ from selenium import webdriver
 from settings import username, password
 
 
+############------------ GLOBAL VARIABLE(S) ------------############
+user = username
+password = password
+
+
 ############------------ FUNCTION(S) ------------############
 def delete_inmails():
     # set url
