@@ -1,8 +1,11 @@
 ############------------ IMPORTS ------------############
+### Python
 import time
-from selenium import webdriver
+import random
+### Self/Program
 import settings as s
-import random 
+### Other
+from selenium import webdriver
 
 
 ############------------ GLOBAL VARIABLE(S) ------------############
@@ -69,16 +72,17 @@ def log_onto_linkedin():
     driver.find_element_by_class_name(click).click()
 
 
+###--- MAIN ---##############################################
 def delete_inmails():
     pass
 
 
 ############------------ DRIVER CODE ------------############
 if __name__ == "__main__":
-    # log_onto_linkedin()
+    log_onto_linkedin()
 
-    generate_random_float()
+    # wait to avoid bot-detection
+    seconds = generate_random_float()
+    time.sleep(seconds)
 
-    # time.sleep(3)
-
-    # delete_inmails()
+    delete_inmails()
