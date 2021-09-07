@@ -49,6 +49,14 @@ def log_onto_linkedin():
     driver.find_element_by_class_name(click).click()
 
 
+def delete_inmails():
+    pass
+
+
 ############------------ DRIVER CODE ------------############
 if __name__ == "__main__":
     log_onto_linkedin()
+
+    time.sleep(9.384)
+
+    delete_inmails()
