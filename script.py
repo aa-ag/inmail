@@ -23,22 +23,22 @@ def delete_inmails():
     driver.get(url)
 
     # wait to avoid bot-detection
-    time.sleep(4)
+    time.sleep(5)
 
     # input username into username field
     driver.find_element_by_id("username").send_keys(username)
 
     # wait to avoid bot-detection
-    time.sleep(3)
+    time.sleep(4)
 
      # input password into password field
     driver.find_element_by_id("password").send_keys(password)
 
     # wait to avoid bot-detection
-    time.sleep(2)
+    time.sleep(3)
 
     # click on "Sign in" button
-    driver.find_element_by_class_name("btn__primary--large from__button--floating")
+    driver.find_element_by_class_name("btn__primary--large from__button--floating").click()
 
 
 ############------------ DRIVER CODE ------------############
