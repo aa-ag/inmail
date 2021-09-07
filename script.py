@@ -4,20 +4,25 @@ from settings import username, password
 
 
 ############------------ GLOBAL VARIABLE(S) ------------############
-user = username
+username = username
 password = password
+
+login_url = 'https://www.linkedin.com/login?fromSignIn=true&trk=guest_homepage-basic_nav-header-signin'
 
 
 ############------------ FUNCTION(S) ------------############
 def delete_inmails():
     # set url
-    url = 'https://www.linkedin.com/feed/?trk=homepage-basic_signin-form_submit'
+    url = login_url
 
     # creates a webdriver object to open the browser
     driver = webdriver.Firefox()
 
     # opens url
     driver.get(url)
+
+    # input username into username field
+    driver.find_element_by_id("username").send_keys(username)
 
 
 ############------------ DRIVER CODE ------------############
