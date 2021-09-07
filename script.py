@@ -38,7 +38,7 @@ def delete_inmails():
     time.sleep(3)
 
     # click on "Sign in" button
-    driver.find_element_by_class_name("btn__primary--large from__button--floating").click()
+    driver.find_element_by_class_name("btn__primary--large").click()
 
 
 ############------------ DRIVER CODE ------------############
