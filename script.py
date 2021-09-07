@@ -27,6 +27,9 @@ def delete_inmails():
      # input password into password field
     driver.find_element_by_id("password").send_keys(password)
 
+    # click on "Sign in" button
+    driver.find_element_by_class_name("btn__primary--large from__button--floating")
+
 
 ############------------ DRIVER CODE ------------############
 if __name__ == "__main__":
