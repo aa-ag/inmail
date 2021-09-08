@@ -83,14 +83,8 @@ def delete_inmails():
 
     # click on burger | three dots button
     ### first, expand dropdown
-    driver.find_element_by_class_name("artdeco-button__icon").click()
-
-    # wait to avoid bot-detection
-    seconds = generate_random_float()
-    time.sleep(seconds)
-
-    ### second, click on delete button
-    driver.find_element_by_id("ember312").click()
+    element = driver.find_element_by_class_name("msg-thread-actions__dropdown-container")
+    driver.execute_script("arguments[0].click();", element)
 
     
 
