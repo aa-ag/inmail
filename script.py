@@ -86,6 +86,9 @@ def delete_inmails():
     element = driver.find_element_by_class_name("msg-thread-actions__dropdown-container")
     driver.execute_script("arguments[0].click();", element)
 
+    ### second, click on delete button
+    driver.find_element_by_link_text("Delete").click()
+
     
 
 
