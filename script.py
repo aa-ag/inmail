@@ -84,10 +84,11 @@ def delete_inmails():
     # click on burger | three dots button
     ### first, expand dropdown
     element = driver.find_element_by_class_name("msg-thread-actions__dropdown-container")
-    driver.execute_script("arguments[0].click();", element)
+    driver.execute_script("arguments[0].click();", element).click()
 
-    ### second, click on delete button
-    driver.find_element_by_link_text("Delete").click()
+    ## TO DO: 
+    # click on hidden element
+    # click on confirmation button
 
     
 
